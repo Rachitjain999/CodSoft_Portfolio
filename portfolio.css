@@ -1,5 +1,6 @@
+/* #bca9dc */
 body{
-    background: linear-gradient(grey,white ,skyblue)
+    background: linear-gradient(#8ca3a8,white ,skyblue)
   }
   /* Google Font CDN Link */
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
@@ -11,60 +12,72 @@ body{
     scroll-behavior: smooth;
   }
   
-  /* Custom Scroll Bar CSS */
-  ::-webkit-scrollbar {
-      width: 8px;
-  }
-  ::-webkit-scrollbar-track {
-      background:linear-gradient(purple,pink,orange,red,green,
-      yellow,blue,blueviolet ,skyblue)
-  };
-  ::-webkit-scrollbar-thumb {
-      background: black;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-      background: black;
+  a{
+    text-decoration: none;
+    color: black;
   }
   /* navbar styling */
   nav{
     position: fixed;
     width: 100%;
-    padding: 20px ;
+    /* padding: 20px; */
+    padding-top: 20px;
+    margin-left: -25px;
+    margin-right: -20px;
     z-index: 995;
     transition: all 0.2s ease;
     font-family:initial, sans-serif;
     font-size: 1.5cm;
   }
+
   nav.sticky{
     background: rgb(6, 144, 190);
-    padding: 15px ;
+    padding: 10px;
+    margin: auto;
   }
   nav .IPL{
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: auto;
   }
+/* @Rachit */
+
   nav .IPL .RCB a{
-    font-weight: 900;
-    font-size: 55px;
-    -webkit-text-stroke: 2px black;
-      /* background: linear-gradient(
-          0deg, rgb(153, 13, 13), white); */
-          background: black;
+      font-size: 45px;
+      color:Black;
       background-clip: text;
-      -webkit-text-fill-color: transparent;  
-    font-family:initial;
-    padding: 5px;
-    text-shadow: 1px 1px 20px white;
+      font-family:'Times New Roman', Times, serif;
+      padding-left: 50px;
+      padding-top:8px;
+      
   }
+  nav .IPL .RCB a:hover
+  {
+    text-shadow: .1px .1px .1px white;  
+    font-size:45.25px ;
+  }
+  nav.sticky .IPL .RCB a:hover
+  {
+    text-shadow: .1px .1px .1px white; 
+    font-size:35.25px;
+  }
+ 
   nav.sticky .IPL .RCB a{
-    color: white;
+      color:Black;
+      font-size: 35px;
+      padding-top:10px;
+      padding-left: 10px;
   }
+/* The width is 100%, when the viewport is 800px or smaller */
+  @media screen and (max-width: 800px) {
+    .nav.sticky .IPL .RCB{
+      width: 100%;
+    }
+  }
+/*  Menu Bar */
+
   nav .IPL .CSK{
     display: flex;
     position: relative;
@@ -74,59 +87,44 @@ body{
     margin: 0px 30px;
   }
   .IPL .CSK a{
-    font-size: 30px;
-    font-weight: 2cm;
+    font-size: 35px;
+    font-weight: 500px;
     padding: 1px 10PX;
     transition: all 0.4s ease;
-    -webkit-text-stroke: 2px black;
-    background: linear-gradient(
-          120deg, Black, white, purple, red, brown, green);
-      background-clip: text;
-      -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .01px white;
+    background-clip: text;
   }
   .IPL .CSK a:hover{
     text-shadow: 20px 2px 20px white;
   }
-  
+
   nav.sticky .CSK a{
     color: #FFF;
   }
   nav.sticky .CSK a:hover{
     color: #0E2431;
   }
+
+ /* Icons */
+
   .IPL .RJ a{
-    color: #4070f4;
-    font-size: 18px;
-    margin: 0 6px;
+    color: Black;
+    padding-right: 20px;
   }
   nav.sticky .RJ a{
     color: #FFF;
   }
-  
-  /* Side Navigation Menu Button CSS */
-  nav .CSK-btn,
-  .IPL .CSK .MI{
-    position: absolute;
-    color: #fff;
-    right: 30px;
-    top: 20px;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: none;
+  .fa_icons{
+    font-size: 30px;
   }
-  nav .CSK-btn{
-    color: #4070f4;
+  .fa_icons:hover{
+    font-size: 32.5px;
+    color:black;
+    text-shadow:20px 2px 20px white ;
   }
-  nav.sticky .CSK-btn{
-    color: #FFF;
-  }
-  .IPL .CSK .CSK-btn{
-    color: #fff;
-  }
-  
-  
-  /* home section styling */
+
+/* home section styling */
+
   .home{
     height: 100vh;
     width: 100%;
@@ -184,11 +182,15 @@ body{
   }
   
   /* About Section Styling */
+
   /* Those Elements Where We Have Apply Same CSS,
    I'm Selecting Directly 'Section Tag' and 'Class'  */
+
   section{
     padding-top: 40px;
   }
+
+  
   section .VJ{
     width: 80%;
     margin: 40px auto;
@@ -254,18 +256,18 @@ body{
   }
   section .button button{
     outline:3px solid black;
-    padding: 8px 16px;
+    padding: 15px 5px;
     border-radius: 4px;
-    font-size: 35px;
-    font-weight: 400;
+    font-size: 30px;
+    font-weight: 0px;
     background: blueviolet;
     color: gainsboro;
     border: 2px solid transparent;
     cursor: pointer;
     transition: all 0.4s ease;
     font-family: initial;
-  
   }
+
   section .button button:hover{
     border-color: #4070f4;
     background-color: #fff;
@@ -312,9 +314,8 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between; 
-    
-  
   }
+  
   .RP .mahi{
     width: calc(100% / 2 - 20px);
     margin: 20px 0;
@@ -335,7 +336,9 @@ body{
   .RP .mahi:hover{
     text-shadow: 10px 10px 10px white;
   }
+
   /* My Services CSS */
+
   .services .Dhoni{
     display: flex;
     flex-wrap: wrap;
@@ -380,9 +383,13 @@ body{
   .services .Dhoni .mahi:hover p{
     color: #fff;
   }
+
   /* Contact Me CSS */
+
   .contact{
-    background: #F0F8FF;
+    /* background: #F0F8FF; */
+    background: rgb(106,104,104);
+background: linear-gradient(90deg, rgba(106,104,104,1) 26%, rgba(201,201,201,1) 51%, rgba(106,104,104,1) 85%);
   }
   .contact .VJ{
     margin: 0 auto;
@@ -393,8 +400,28 @@ body{
     text-align: center;
     margin: auto;
   }
+  .mail{
+    color:black;
+    font-size: 25px;
+  }
+  .mail_h
+  {
+    color:black;
+  }
+  .mail_h:hover{
+    font-size:25.2px ;
+  }
+  .number
+  {
+    color:black;
+    padding-top:8px;
+  }
+  .number:hover{
+    font-size: 25.2px;
+  }
   
   /* Footer CSS */
+
   footer{
     background: #4070f4;
     padding: 15px 0;
@@ -413,19 +440,6 @@ body{
   footer .PJ span a:hover{
     text-decoration: underline;
   }
-  /* Scroll TO Top Button CSS */
-  .scroll-button a{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: #fff;
-    background: #4070f4;
-    padding: 7px 12px;;
-    font-size: 18px;
-    border-radius: 6px;
-    box-shadow: rgba(0, 0, 0, 0.15);
-    display: none;
-  }
   
   /* Responsive Media Query */
   @media (max-width: 1190px) {
@@ -438,6 +452,7 @@ body{
       justify-content: center;
       flex-direction: column;
     }
+  
     .about .ABD .left{
       display: flex;
       justify-content: center;
@@ -454,14 +469,19 @@ body{
   }
   @media (max-width: 900px) {
     .about .left img{
-      height: 350px;
-      width: 350px;
+      height: 100px;
+      width: 100px;
     }
   }
-  
+  @media screen and (max-width: 800px) {
+    .left, .main, .right {
+      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
+    }
+  }
   @media (max-width: 750px) {
     nav .IPL{
-      width: 90%;
+      width: 100%;
+      height:100%;
     }
     nav .IPL .CSK{
       position: fixed;
@@ -526,8 +546,10 @@ body{
   
   @media (max-width: 500px){
     .home .PJ-two{
-      font-size: 55px;
+      width:100%;
+      height:100%;
     }
+
     .home .PJ-three{
       font-size: 25px;
     }
